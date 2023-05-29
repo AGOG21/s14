@@ -1,0 +1,746 @@
+body{
+  background-color:grey;
+  background-image: url(pxfuel1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  color: aliceblue;
+  text-align: center;
+}
+
+h3{
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+P{
+  color: aliceblue
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+html {
+    height:100%;
+}
+
+body {
+    margin:0;
+}
+
+
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
+html{
+    display: grid;
+    place-items: center;
+}
+
+h1,h2{
+background-color: rgba(0, 0, 0, 0.500);
+}
+p{
+color: rgb(245, 245, 220);
+background-color: rgba(0, 0, 0, 0.300);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    animation: change-color 2.0s infinite;
+    color: aliceblue;
+}
+
+@keyframes change-color{
+    0%{
+        color:  rgb(240, 250, 250); 
+    }
+    30%{
+        color:  rgb(180, 170, 250); 
+    }
+    60%{
+        color:  rgb(150, 110, 190); 
+    }
+    100%{
+        color:  rgb(210, 120, 255); 
+    }
+}
+
+button,button::after {
+    font-size: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    
+  }
+  
+  button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'イザベラ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  
+  .container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    aspect-ratio: 16/9;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .card-container {
+    filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+  }
+  
+  .card-content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    grid-template-rows: 0.1fr 0.7fr 0.25fr;
+    background-color: hsl(296, 59%, 10%);
+    width: 10em;
+    aspect-ratio: 9/16;
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+  }
+  
+  .card-content::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    background: linear-gradient(to bottom, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent), linear-gradient(to left, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent);
+    animation: rotate 5s infinite linear;
+  }
+  
+  .card-content::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    background: repeating-linear-gradient(to bottom, transparent 0%, rgba(64, 144, 181, 0.6) 1px, rgb(0, 0, 0) 3px, rgba(64, 144, 181, 0.3019607843) 5px, #153544 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsla(295, 60%, 12%, 0.99) 100%);
+    box-shadow: inset 0px 0px 30px 40px hsl(296, 59%, 10%);
+    -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    animation: backglitch 94ms linear infinite;
+  }
+  
+  .card-title {
+    z-index: 80;
+    -webkit-clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    background: linear-gradient(90deg, rgba(255, 254, 250, 0) 0%, rgba(102, 224, 255, 0.3) 27%, rgba(102, 224, 255, 0.3) 63%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(102, 224, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 96%, rgba(102, 224, 255, 0.3) 100%);
+    width: 98%;
+    font-size: 1.2em;
+  }
+  
+  .title {
+    width: 400%;
+    height: 400%;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: hsl(192, 100%, 88%);
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+  }
+  
+  .card-body {
+    padding-block: 1.5em;
+    padding-inline: 1em;
+    z-index: 80;
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .svg-card {
+    text-decoration: none;
+    color: hsl(192, 100%, 88%);
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 224, 255, 0.2) 27%, rgba(102, 224, 255, 0.2) 63%, transparent 100%);
+    fill: currentColor;
+    width: 2em;
+    transition: 0.5s;
+   
+    
+  }
+  
+  .svg-card .face {
+    width: 0.7em;
+  }
+  
+  .svg-card .twit {
+    width: 1em;
+  }
+  
+  .svg-card .insta {
+    width: 1em;
+    
+  }
+  
+  .svg-card .google {
+    width: 1.1em;
+  }
+  
+  .svg-card:hover {
+    cursor: pointer;
+    color: hsl(192, 100%, 100%);
+  }
+  
+  .card-footer {
+    padding-inline: 1em;
+  }
+  
+  @keyframes backglitch {
+    0% {
+      box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+  
+    50% {
+      box-shadow: inset 0px -20px 30px 40px hsl(296, 59%, 10.2%);
+    }
+  
+    to {
+      box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate(-50%, 20%);
+    }
+  
+    50% {
+      transform: rotate(180deg) translate(40%, 10%);
+    }
+  
+    to {
+      transform: rotate(360deg) translate(-50%, 20%);
+    }
+  }
+  
+  @keyframes blinkShadowsFilter {
+    0% {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  
+    25% {
+      filter: drop-shadow(46px -36px 24px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 24px #9e30a9);
+    }
+  
+    50% {
+      filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    75% {
+      filter: drop-shadow(20px -18px 25px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    to {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  }/*# sourceMappingURL=style.css.map */
+
+
+  .container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: grid;
+    gap: 2em;
+    place-content: center;
+    width: 400px;
+  }
+  
+  .container input[type=radio] {
+    display: none;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .span {
+    inset: 2px;
+    background-color: #4090b5;
+    background: repeating-linear-gradient(to bottom, transparent 0%, #4090b5 1px, #4090b5 3px, #4090b5 5px, #4090b5 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsl(295, 60%, 12%) 100%);
+    box-shadow: inset 0 40px 20px hsl(296, 59%, 10%);
+  }
+  
+  .input-btn:is(:checked) + .neon-btn .txt {
+    text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    color: rgb(255, 255, 255);
+    animation: colorchange 0.3s ease;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::before {
+    animation-duration: 0.6s;
+  }
+  
+  .input-btn:is(:checked) + .neon-btn::after {
+    animation-duration: 0.6s;
+  }
+  
+  .neon-btn {
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 5em;
+    text-align: right;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+  }
+  
+  .neon-btn .span {
+    display: flex;
+    -webkit-clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    clip-path: polygon(6% 0, 93% 0, 100% 8%, 100% 86%, 90% 89%, 88% 100%, 5% 100%, 0% 85%);
+    position: absolute;
+    inset: 1px;
+    background-color: #212121;
+    z-index: 1;
+  }
+  
+  .neon-btn .txt {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: aliceblue;
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+    text-shadow: 0px 0px 1px #4090b5, 0px 0px 1px #9e30a9, 0 0 1px white;
+  }
+  
+  .neon-btn::before {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 20px #9e30a9;
+    background-image: conic-gradient(#9e30a9, transparent, transparent, transparent, transparent, transparent, transparent, #9e30a9);
+    animation: rotate 4s linear infinite -2s;
+  }
+  
+  .neon-btn::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    aspect-ratio: 1.5/1;
+    box-shadow: -17px -19px 10px #4090b5;
+    background-image: conic-gradient(#4090b5, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #4090b5);
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes colorchange {
+    0% {
+      text-shadow: 0px 0px 0px #9e30a9, 0px 0px 0px #4090b5, 0 0 0px rgba(255, 255, 255, 0.616);
+    }
+  
+    50% {
+      text-shadow: -6px 5px 1px #9e30a9, 5px 11px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  
+    to {
+      text-shadow: 2px 4px 1px #9e30a9, 2px 2px 1px #4090b5, 0 0 20px rgba(255, 255, 255, 0.616);
+    }
+  }
+  
+  @keyframes backgroundchange {
+    0% {
+      background-color: transparent;
+    }
+  
+    50% {
+      background-color: #4090b5;
+    }
+  
+    to {
+      background-color: transparent;
+    }
+  }
+
+  .texto{
+    font-size: 20px;
+  }
+
+  
+img{
+  border-radius: 50px;
+}
+
+h2{
+  color: aliceblue;
+}
+
+h3{
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+html {
+    height:100%;
+}
+
+body {
+    margin:0;
+}
+
+
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
+html{
+    display: grid;
+    place-items: center;
+}
+
+h1,h2{
+background-color: rgba(0, 0, 0, 0.500);
+}
+p{
+color: rgb(245, 245, 220);
+background-color: rgba(0, 0, 0, 0.300);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    animation: change-color 2.0s infinite;
+    color: aliceblue;
+}
+
+@keyframes change-color{
+    0%{
+        color:  rgb(240, 250, 250); 
+    }
+    30%{
+        color:  rgb(180, 170, 250); 
+    }
+    60%{
+        color:  rgb(150, 110, 190); 
+    }
+    100%{
+        color:  rgb(210, 120, 255); 
+    }
+}
+
+button,button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'イザベラ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  
+.card {
+    width: 300px;
+    height: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.400);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+  }
+  .card {
+    width: 300px;
+    height: 450px;
+    border-color: rgb(150, 120, 255);
+    border: 1px solid rgb(150, 120, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+label{
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
